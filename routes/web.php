@@ -17,6 +17,28 @@ Route::get('/', function () {
 
 Route::get('/goods', 'GoodsController@index');
 
+Route::get('cart/index/{id}', 'CartController@index');
+
+Route::get('cart/list', 'CartController@list');
+
+Route::get('/text/{id}', 'weixin\WxPayController@text');//微信支付
+
+Route::post('pay/notify', 'weixin\WxPayController@notify');//微信支付回调
+
+
+Route::get('/order/paystatus', 'OrderController@payStatus');//微信支付回调
+
+Route::get('order/index/{id}', 'OrderController@index');
+
+Route::get('order/list', 'OrderController@list');
+
+Route::get('order/house/{id}', 'OrderController@house');
+
+Route::get('order/house/{id}', 'WxPayController@house');
+
+
+Route::get('Oderd/index', 'OderdControllers@index');
+
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
