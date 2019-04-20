@@ -7,7 +7,7 @@ use Illuminate\Support\Str;
 class Order extends Model
 {
     //
-    protected $table = 'Order';
+    protected $table = 'order';
     public $timestamps = false;
     public $primaryKey = 'o_id';
 
