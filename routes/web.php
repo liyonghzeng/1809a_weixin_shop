@@ -26,7 +26,7 @@ Route::get('/text/{id}', 'weixin\WxPayController@text');//微信支付
 Route::post('weixin/pay/notify', 'weixin\WxPayController@notify');//微信支付回调
 
 
-Route::get('/order/paystatus', 'OrderController@payStatus');//微信支付回调
+Route::get('/order/paystatus', 'OrderController@payStatus');//
 
 Route::get('order/index/{id}', 'OrderController@index');
 
