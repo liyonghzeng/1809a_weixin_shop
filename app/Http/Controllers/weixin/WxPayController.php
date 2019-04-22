@@ -22,6 +22,7 @@ class WxPayController extends Controller
      */
     public function text($id)
     {
+        echo $id;
         $u_name=Auth::id();
         $data=Order::where(['order_id'=>$id,'u_name'=>$u_name])->get();
         if($data){ //判断订单号是否存在
@@ -38,14 +39,14 @@ class WxPayController extends Controller
         }
 
         $total_fee = $number; //用户支付金额
-        $order_id = time() . mt_rand(111111, 999999);
+//        $order_id = time() . mt_rand(111111, 999999);
         $order_info = [
             'appid' => env('WEIXIN_APPID_0'),      //微信支付绑定的服务号的APPID
             'mch_id' => env('WEIXIN_MCH_ID'),       // 商户ID
             'nonce_str' => Str::random(16),             // 随机字符串
             'sign_type' => 'MD5',
             'body' => '测试订单-' .$id,
-            'out_trade_no' => $order_id,                       //本地订单号
+            'out_trade_no' => $id,                       //本地订单号
             'total_fee' => $total_fee,
             'spbill_create_ip' => $_SERVER['REMOTE_ADDR'],     //客户端IP
             'notify_url' => $this->notify_url,        //通知回调地址
@@ -182,11 +183,12 @@ class WxPayController extends Controller
         if ($xml->result_code == 'SUCCESS' && $xml->return_code == 'SUCCESS') {      //微信支付成功回调
             //验证签名
             $sign = true;
-
             if ($sign) {       //签名验证成功
                 //TODO 逻辑处理  订单状态更新
                 $pay_time = strtotime($xml->time_end);
-                Order::where(['order_id'=>$xml->out_trade_no])->update(['pay_time'=>$pay_time]);
+                echo  $pay_time;
+                Order::where(['order_id'=>$xml->out_trade_no])->update(['pay_time'=>1]);
+//                echo 222;
             } else {
                 //TODO 验签失败
                 echo '验签失败，IP: ' . $_SERVER['REMOTE_ADDR'];
