@@ -39,7 +39,7 @@
                     var localIds = res.localIds;
                     var img = '';
                     $.each(localIds,function(i,v){
-                        img += v+',';
+
                         var node = "#imgs"+i;
                         $(node).attr('src',v);
                         //上传图片
@@ -49,7 +49,8 @@
                             success: function (res1) {
                                 var serverId = res1.serverId; // 返回图片的服务器端ID
                                 //alert('serverID: '+ serverId);
-                                console.log(res1);
+                                img += serverId+',';
+                                console.log(img);
                             }
                         });
                     });
