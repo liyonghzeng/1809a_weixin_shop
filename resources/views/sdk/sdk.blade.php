@@ -51,10 +51,11 @@
                                 var serverId = res1.serverId; // 返回图片的服务器端ID
                                 //alert('serverID: '+ serverId);
                                 img += serverId+',';
-                                alert(img);
+
                             }
                         });
                     });
+                    alert(img);
                     // $.ajax({
                     //     url : '/test2?img='+img,     //将上传的照片id发送给后端
                     //     type: 'get',
