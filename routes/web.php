@@ -17,6 +17,9 @@ Route::get('/', function () {
 
 Route::get('/goods', 'GoodsController@index');
 
+Route::get('/addBrowse/{id}', 'GoodsController@Browse');
+
+
 Route::get('cart/index/{id}', 'CartController@index');
 
 Route::get('cart/list', 'CartController@list');
@@ -38,6 +41,9 @@ Route::get('order/house/{id}', 'WxPayController@house');
 
 
 Route::get('Oderd/index', 'OderdControllers@index');
+
+//jssdk
+Route::get('/test', 'JssdkController@test');
 
 
 Auth::routes();

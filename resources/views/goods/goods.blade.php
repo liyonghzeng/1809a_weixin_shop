@@ -70,16 +70,26 @@
         <div class="title m-b-md">
 
                 @foreach($data as $k=>$v)
-                   序号 : {{$v->goods_id}}
-                   名称：{{$v->goods_name}}>>>>>
-                   价格：{{$v->goods_price}}>>>>>
-                <form action="/cart/index/{{$v->goods_id}}" method="get">
-                    <input type="submit">
-                </form>
+                       序号 : {{$v->goods_id}}
+                       名称：{{$v->goods_name}}>>>>>
+                       价格：{{$v->goods_price}}>>>>>
+                    <form action="/cart/index/{{$v->goods_id}}" method="get">
+                        <input type="submit">
+                    </form>
 
-                <br />
+                    <form action="/addBrowse/{{$v->goods_id}}" method="get">
+                        <input type="submit" value="查看商品详情">
+                    </form>
+
+                    <br />
                 @endforeach
-
+                @if($ly  == "")
+                    @else
+                        最热浏览记录  (名称/价格):
+                            @foreach($ly as $k=>$v)
+                            ---- {{$v['goods_name']}}/{{$v['goods_price']}}亿元----
+                                @endforeach
+                    @endif
         </div>
 
         <div class="links">

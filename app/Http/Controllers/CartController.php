@@ -69,6 +69,6 @@ class CartController extends Controller
             $res +=$v->goods_price*$v->cart_number;
         }
 
-        return view('/cart/cartlist',['data'=>$data,'res'=>$res]);
+        return view('/goods',['data'=>$data,'res'=>$res]);
     }
 }
