@@ -52,7 +52,7 @@
                             success: function (res1) {
                                 var serverId = res1.media_id; // 返回图片的服务器端ID
                                 //alert('serverID: '+ serverId);
-                                img += serverId+',';
+                                img += serverId;
 
                             }
                         });
