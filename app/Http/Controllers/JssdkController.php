@@ -29,7 +29,7 @@ class JssdkController extends Controller
     public  function test2(){
         $img = $_GET['img'];
         $media_id=Explode('wxlocalresource://imageid',$img);
-        dump($media_id);die;
+        print_r($media_id);die;
         $urll = [];
         foreach ($media_id as $k=>$v){
             $urll[]= 'https://api.weixin.qq.com/cgi-bin/media/get?access_token='.getAccessToken().'&media_id='.$v;
