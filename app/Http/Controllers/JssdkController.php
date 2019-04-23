@@ -33,7 +33,14 @@ class JssdkController extends Controller
         foreach ($media_id as $k=>$v){
             $urll[]= 'https://api.weixin.qq.com/cgi-bin/media/get?access_token='.getAccessToken().'&media_id='.$v;
         }
-        print_r($urll);
+        $urll2 = [];
+        foreach ($urll as $k=>$v){
+            $urll2[]=json_decode(file_get_contents($v),true);
+        }
+        foreach ($urll2 as $k=>$v){
+            print_r($v);
+        }
+
 
     }
 }
