@@ -50,8 +50,8 @@
                             localId: v, // 需要上传的图片的本地ID，由chooseImage接口获得
                             isShowProgressTips: 1, // 默认为1，显示进度提示
                             success: function (res1) {
-                                var serverId = res1.media_id; // 返回图片的服务器端ID
-                                alert('serverID: '+ serverId);
+                                // var serverId = res1.media_id; // 返回图片的服务器端ID
+                                alert(res1);
                                 // $.ajax({
                                 //     url : '/test2?img='+serverId,     //将上传的照片id发送给后端
                                 //     type: 'get',
