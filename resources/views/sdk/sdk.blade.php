@@ -30,22 +30,31 @@
     });
     wx.ready(function(){
         $("#btn1").click(function(){
-            alert(111);
-            // wx.chooseImage({
-            //     count: 3, // 默认9
-            //     sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
-            //     sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
-            //     success: function (res) {
-            //         var localIds = res.localIds;
-            //         var img = '';
-            //         $.each(res,function(i,v){
-            //             img += v+',';
-            //             var node = "#imgs"+i;
-            //             $(node).attr('src',v);
-            //         });
-            //         console.log(img);
-            //     }
-            // });
+            // alert(111);
+            wx.chooseImage({
+                count: 3, // 默认9
+                sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
+                sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
+                success: function (res) {
+                    var localIds = res.localIds;
+                    var img = '';
+                    $.each(res,function(i,v){
+                        img += v+',';
+                        var node = "#imgs"+i;
+                        $(node).attr('src',v);
+                        wx.uploadImage({
+                            localId: v, // 需要上传的图片的本地ID，由chooseImage接口获得
+                            isShowProgressTips: 1, // 默认为1，显示进度提示
+                            success: function (res1) {
+                                var serverId = res1.serverId; // 返回图片的服务器端ID
+                                //alert('serverID: '+ serverId);
+                                console.log(res1);
+                            }
+                        });
+                    });
+                    console.log(img);
+                }
+            });
         });
     });
 
