@@ -28,6 +28,7 @@ class JssdkController extends Controller
     }
     public  function test2(){
         $img = $_GET['img'];
+        print_r($img);die;
         $media_id=Explode('wxlocalresource://imageid',$img);
         print_r($media_id);die;
         $urll = [];
