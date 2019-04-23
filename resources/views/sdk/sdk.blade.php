@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script src="http://res2.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
-    <script src="/js/jquery/jquery.js"></script>
+    <script src="/js/jquery.js"></script>
 </head>
 <body>
             <button id="btn1">选择照片</button>
