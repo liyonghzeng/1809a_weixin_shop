@@ -28,8 +28,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/sdk/sdk.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="39" column="45" lean-forward="true" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="45" />
+            <state relative-caret-position="252">
+              <caret line="39" column="36" lean-forward="true" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -369,12 +369,12 @@
       <workItem from="1555893434016" duration="28793000" />
       <workItem from="1555979753443" duration="1412000" />
       <workItem from="1556007673303" duration="7001000" />
-      <workItem from="1556018071534" duration="2140000" />
+      <workItem from="1556018071534" duration="2355000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75480000" />
+    <option name="totallyTimeSpent" value="75695000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="407" y="54" width="1114" height="498" extended-state="0" />
@@ -681,8 +681,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/sdk/sdk.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="39" column="45" lean-forward="true" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="45" />
+        <state relative-caret-position="252">
+          <caret line="39" column="36" lean-forward="true" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
         </state>
       </provider>
     </entry>
