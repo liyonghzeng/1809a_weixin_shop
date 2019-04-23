@@ -51,14 +51,14 @@
                             isShowProgressTips: 1, // 默认为1，显示进度提示
                             success: function (res1) {
                                 var serverId = res1.media_id; // 返回图片的服务器端ID
-                                //alert('serverID: '+ serverId);
-                                $.ajax({
-                                    url : '/test2?img='+serverId,     //将上传的照片id发送给后端
-                                    type: 'get',
-                                    success:function(d){
-                                        console.log(d);
-                                    }
-                                });
+                                alert('serverID: '+ serverId);
+                                // $.ajax({
+                                //     url : '/test2?img='+serverId,     //将上传的照片id发送给后端
+                                //     type: 'get',
+                                //     success:function(d){
+                                //         console.log(d);
+                                //     }
+                                // });
                             }
                         });
                     });
