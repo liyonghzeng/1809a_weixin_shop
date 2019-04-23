@@ -50,7 +50,7 @@
                                 var serverId = res1.serverId; // 返回图片的服务器端ID
                                 //alert('serverID: '+ serverId);
                                 img += serverId+',';
-                                console.log(img);
+                                alert(img);
                             }
                         });
                     });
