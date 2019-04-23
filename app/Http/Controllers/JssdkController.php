@@ -27,6 +27,13 @@ class JssdkController extends Controller
         return view('sdk/sdk',['js_config'=>$js_config]);
     }
     public  function test2(){
-        echo 2222;
+        $img = $_GET['img'];
+        $media_id=Explode(',',$img);
+        $urll = [];
+        foreach ($media_id as $k=>$v){
+            $urll[]= 'https://api.weixin.qq.com/cgi-bin/media/get?access_token='.getAccessToken().'&media_id='.$v;
+        }
+        print_r($urll);
+
     }
 }
