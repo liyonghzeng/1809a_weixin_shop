@@ -45,7 +45,7 @@ Route::get('Oderd/index', 'OderdControllers@index');
 //jssdk
 Route::get('/test', 'JssdkController@test');
 
-Route::get('/test2/{id}', 'JssdkController@test2');
+Route::get('/test2', 'JssdkController@test2');
 
 
 Auth::routes();
