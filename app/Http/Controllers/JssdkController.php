@@ -26,4 +26,7 @@ class JssdkController extends Controller
         ];
         return view('sdk/sdk',['js_config'=>$js_config]);
     }
+    public  function test2($id){
+        echo 2222;
+    }
 }
