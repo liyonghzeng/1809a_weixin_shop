@@ -41,6 +41,7 @@
                     $.each(localIds,function(i,v){
 
                         var node = "#imgs"+i;
+                        img += v+',';
                         $(node).attr('src',v);
                         //上传图片
                         wx.uploadImage({
