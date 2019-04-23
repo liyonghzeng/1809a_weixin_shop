@@ -42,7 +42,7 @@
                     $.each(localIds,function(i,v){
 
                         var node = "#imgs"+i;
-                        // img += v+',';
+                        img += v+',';
                         $(node).attr('src',v);
                         //上传图片
                         wx.uploadImage({
@@ -57,13 +57,13 @@
                         });
                     });
                     alert(img);
-                    // $.ajax({
-                    //     url : '/test2?img='+img,     //将上传的照片id发送给后端
-                    //     type: 'get',
-                    //     success:function(d){
-                    //         console.log(d);
-                    //     }
-                    // });
+                    $.ajax({
+                        url : '/test2?img='+2,     //将上传的照片id发送给后端
+                        type: 'get',
+                        success:function(d){
+                            console.log(d);
+                        }
+                    });
                 }
             });
         });
