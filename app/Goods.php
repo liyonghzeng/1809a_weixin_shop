@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Goods extends Model
 {
-    protected $table = 'goods';
+    protected $table = 'goods'; 
     public $timestamps = false;
-    public $primaryKey = 'id';
+    public $primaryKey = 'goods_id';
  }
 

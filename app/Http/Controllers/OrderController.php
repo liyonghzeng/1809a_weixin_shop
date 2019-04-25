@@ -113,4 +113,14 @@ class OrderController extends Controller
         }
         die(json_encode($response));
     }
+        public function demand()
+        {
+            $data=Order::get();
+            $time = time();
+            foreach($data as $k=>$v){
+                if($time-$v->add_cart_time >1800 && $v->pay_time == 0){
+                    Order::where(['o_id'=>$v->o_id])->update(['pay_del'=>1]);
+                }
+            }
+        }
 }
